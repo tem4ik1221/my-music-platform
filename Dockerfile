@@ -63,4 +63,4 @@ EXPOSE 8000
 # uvicorn доступен как системная команда, потому что pip
 # установил его в /usr/local/bin (уже в PATH).
 # ─────────────────────────────────────────────────────────────
-CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}00}
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
